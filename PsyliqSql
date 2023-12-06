@@ -1,0 +1,10 @@
+SELECT * FROM new_schema.`paytm epurchase data`;
+
+SELECT DISTINCT Category_Grouped
+
+FROM new_schema.`paytm epurchase data`;
+SELECT Shipping_City, COUNT(Quantity) AS OrderCount
+FROM new_schema.`paytm epurchase data`
+GROUP BY Shipping_City
+ORDER BY OrderCount DESC
+LIMIT 5;
